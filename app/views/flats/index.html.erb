@@ -1,0 +1,22 @@
+<h1>All our flats</h1>
+
+<p> You searched for . We found 5 flats out of our 5 on our website. </p>
+
+<% @flats.each do |flat| %>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+        <p class="card-text"> <i class="fas fa-users"></i> <%= flat.number_of_guests %> <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %> </p>
+        <a href="#" class="card-link">More info</a>
+        <a href="#" class="card-link">Edit</a>
+        <a href="#" class="card-link">Remove</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<hr>
